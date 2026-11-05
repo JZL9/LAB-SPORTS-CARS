@@ -13,8 +13,32 @@
 
     <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
 </head>
-<body>
+<body class="{{ request.COOKIES.theme }}">
+    <header class="navbar">
+    <div class="container nav-inner">
 
+        <a href="{% url 'main:home_view' %}" class="logo">LAND ROVER</a>
+
+        <nav class="nav-links">
+            <a href="{% url 'main:home_view' %}"
+               class="{% if request.resolver_match.url_name == 'home_view' %}active{% endif %}">Home</a>
+            <a href="{% url 'main:all_cars_view' %}"
+               class="{% if 'cars' in request.path %}active{% endif %}">Cars</a>
+            <a href="{% url 'main:about_view' %}"
+               class="{% if request.resolver_match.url_name == 'about_view' %}active{% endif %}">About Us</a>
+            <a href="#footer">Contact</a>
+        </nav>
+
+        <div class="nav-icons">
+    <span class="material-symbols-outlined">search</span>
+    <a href="{% url 'main:toggle_theme_view' %}" class="theme-toggle">
+        <span class="material-symbols-outlined">
+            {% if request.COOKIES.theme == 'dark' %}light_mode{% else %}dark_mode{% endif %}
+        </span>
+    </a>
+    <span class="material-symbols-outlined">person</span>
+</div>
+    </header>
     {% block content %}
     {% endblock %}
 

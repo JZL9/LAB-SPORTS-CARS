@@ -24,3 +24,11 @@ def defender_view(request: HttpRequest):
 
 def discovery_view(request: HttpRequest):
     return render(request, "main/discovery.html")
+
+def toggle_theme_view(request: HttpRequest):
+    current = request.COOKIES.get("theme", "light")
+    new_theme = "dark" if current == "light" else "light"
+
+    response = redirect(request.META.get("HTTP_REFERER", "/"))
+    response.set_cookie("theme", new_theme)
+    return response

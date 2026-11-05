@@ -1,0 +1,108 @@
+:root {
+    --bg: #f7f5f2;
+    --surface: #ffffff;
+    --text: #1a1a1a;
+    --text-muted: #6b6b6b;
+    --border: #e6e2dc;
+    --accent: #005a2b;
+    --accent-hover: #00431f;
+}
+
+body.dark {
+    --bg: #121212;
+    --surface: #1e1e1e;
+    --text: #f1f1f1;
+    --text-muted: #a8a8a8;
+    --border: #2e2e2e;
+    --accent: #2e9b5f;
+    --accent-hover: #3cb371;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Phudu', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.4s, color 0.4s;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+    transition: background-color 0.4s;
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    position: relative;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 6px 0;
+    transition: color 0.3s;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-icons {
+    display: flex;
+}
