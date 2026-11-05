@@ -101,4 +101,40 @@
         </a>
     </div>
 </section>
+
+<section class="why container">
+    <h2>Why Choose Us</h2>
+    <div class="why-grid">
+        <div class="why-item">
+            <span class="material-symbols-outlined">workspace_premium</span>
+            <h3>Iconic Models</h3>
+            <p>A handpicked range of world-class vehicles.</p>
+        </div>
+        <div class="why-item">
+            <span class="material-symbols-outlined">fact_check</span>
+            <h3>Full Transparency</h3>
+            <p>Detailed history and inspection for every car.</p>
+        </div>
+        <div class="why-item">
+            <span class="material-symbols-outlined">star</span>
+            <h3>Expert Guidance</h3>
+            <p>Personalized advice from automotive experts.</p>
+        </div>
+        <div class="why-item">
+            <span class="material-symbols-outlined">build</span>
+            <h3>After-Sales Care</h3>
+            <p>Ongoing support and exclusive benefits.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta container" style="background-image: url('{% static 'main/images/pages/home-cta.jpg' %}');">
+    <div class="cta-content">
+        <h2>Ready to Drive<br>Your Dream Car?</h2>
+        <a href="{% url 'main:all_cars_view' %}" class="btn">
+            Browse Collection
+            <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+    </div>
+</section>
 {% endblock %}
