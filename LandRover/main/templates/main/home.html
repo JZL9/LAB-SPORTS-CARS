@@ -1,5 +1,104 @@
 {% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Land Rover | Home{% endblock %}
 
 {% block content %}
-    <h1>Home</h1>
+
+<section class="hero" style="background-image: url('{% static 'main/images/pages/home-hero.jpg' %}');">
+    <div class="container hero-content">
+        <p class="eyebrow">Land Rover Collection</p>
+        <h1>Above and<br>Beyond</h1>
+        <p class="hero-text">Explore a curated collection of iconic Land Rover vehicles, built for every terrain.</p>
+        <a href="{% url 'main:all_cars_view' %}" class="btn">
+            Browse Cars
+            <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+    </div>
+</section>
+<section class="features container">
+    <div class="feature">
+        <span class="material-symbols-outlined">terrain</span>
+        <p>All-Terrain Capability</p>
+    </div>
+    <div class="feature">
+        <span class="material-symbols-outlined">diamond</span>
+        <p>Premium Selection</p>
+    </div>
+    <div class="feature">
+        <span class="material-symbols-outlined">verified_user</span>
+        <p>Verified &amp; Inspected</p>
+    </div>
+    <div class="feature">
+        <span class="material-symbols-outlined">support_agent</span>
+        <p>Dedicated Support</p>
+    </div>
+</section>
+
+<section class="featured container">
+    <div class="section-header">
+        <h2>Featured Cars</h2>
+        <a href="{% url 'main:all_cars_view' %}" class="view-all">
+            View All <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+    </div>
+
+    <div class="cars-grid">
+
+        <a href="{% url 'main:range_rover_view' %}" class="car-card">
+            <div class="car-img">
+                <img src="{% static 'main/images/range-rover/range-rover-out-2.png' %}" alt="Range Rover">
+            </div>
+            <div class="car-info">
+                <div>
+                    <h3>Range Rover</h3>
+                    <p>SAR 795,000</p>
+                </div>
+                <span class="material-symbols-outlined">favorite</span>
+            </div>
+        </a>
+
+        <a href="{% url 'main:defender_view' %}" class="car-card">
+            <div class="car-img">
+                <img src="{% static 'main/images/defender/defender-out-2.png' %}" alt="Defender">
+            </div>
+            <div class="car-info">
+                <div>
+                    <h3>Defender</h3>
+                    <p>SAR 465,000</p>
+                </div>
+                <span class="material-symbols-outlined">favorite</span>
+            </div>
+        </a>
+
+        <a href="{% url 'main:discovery_view' %}" class="car-card">
+            <div class="car-img">
+                <img src="{% static 'main/images/discovery/discovery-out-2.png' %}" alt="Discovery">
+            </div>
+            <div class="car-info">
+                <div>
+                    <h3>Discovery</h3>
+                    <p>SAR 325,000</p>
+                </div>
+                <span class="material-symbols-outlined">favorite</span>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<section class="experience container">
+    <div class="experience-img">
+        <img src="{% static 'main/images/pages/home-experience.jpg' %}" alt="Land Rover experience">
+    </div>
+    <div class="experience-text">
+        <p class="eyebrow">The Experience</p>
+        <h2>More Than a Car</h2>
+        <p>A seamless journey from discovery to ownership, with expert support every step of the way.</p>
+        <a href="{% url 'main:about_view' %}" class="btn">
+            Learn More
+            <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+    </div>
+</section>
 {% endblock %}
