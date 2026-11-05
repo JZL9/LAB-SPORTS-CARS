@@ -41,6 +41,52 @@
     </header>
     {% block content %}
     {% endblock %}
+    <footer class="footer" id="footer">
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+            <a href="{% url 'main:home_view' %}" class="logo">LAND ROVER</a>
+            <p>Above and beyond, since 1948.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="{% url 'main:home_view' %}">Home</a>
+            <a href="{% url 'main:all_cars_view' %}">Cars</a>
+            <a href="{% url 'main:about_view' %}">About Us</a>
+            <a href="#footer">Contact</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Support</h4>
+            <a href="#">FAQs</a>
+            <a href="#">Financing</a>
+            <a href="#">Warranty</a>
+            <a href="#">After-Sales</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Stay in the Loop</h4>
+            <p>Get the latest arrivals and exclusive offers.</p>
+            <form class="newsletter">
+                <input type="email" placeholder="Your email">
+                <button type="submit">
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+        <p>&copy; 2026 Land Rover. Built by FSK-AlOtaibi.</p>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/landrover" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/@landrover" target="_blank">YouTube</a>
+            <a href="https://x.com/LandRover" target="_blank">X</a>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
