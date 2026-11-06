@@ -28,9 +28,17 @@ A multi-page dealership website for Land Rover vehicles, built with **Django** t
 
 ## Screenshots
 
-| Car detail | Dark mode | Mobile |
-|---|---|---|
-| ![Detail](screenshots/detail.png) | ![Dark](screenshots/dark.png) | ![Mobile](screenshots/mobile.png) |
+| All Cars | Car Detail |
+|---|---|
+| ![All Cars](screenshots/all-cars.png) | ![Detail](screenshots/detail.png) |
+
+| About Us |
+|---|
+| ![About](screenshots/about.png) |
+
+### Mobile
+
+![Mobile](screenshots/mobile.png)
 
 ## Tech Stack
 
