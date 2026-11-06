@@ -525,3 +525,39 @@ img {
     line-height: 1.1;
     margin-bottom: 24px;
 }
+
+.hero-small {
+    min-height: 45vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.all-cars {
+    padding-top: 40px;
+}
+
+.filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.filters select {
+    padding: 10px 16px;
+    font-family: inherit;
+    font-size: 14px;
+    background-color: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.filters select:hover {
+    border-color: var(--accent);
+}
+
+.results {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
