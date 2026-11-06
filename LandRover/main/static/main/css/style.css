@@ -1013,3 +1013,25 @@ img {
         gap: 12px;
     }
 }
+
+
+/* ============ Background Images ============ */
+.bg-home-hero {
+    background-image: url('../images/pages/home-hero.jpg');
+}
+
+.bg-home-cta {
+    background-image: url('../images/pages/home-cta.jpg');
+}
+
+.bg-all-cars {
+    background-image: url('../images/pages/all-cars-hero.jpg');
+}
+
+.bg-about-hero {
+    background-image: url('../images/pages/about-hero.jpg');
+}
+
+.bg-about-dealer {
+    background-image: url('../images/pages/about-dealer.jpg');
+}

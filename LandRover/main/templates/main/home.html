@@ -5,7 +5,7 @@
 
 {% block content %}
 
-<section class="hero" style="background-image: url('{% static 'main/images/pages/home-hero.jpg' %}');">
+<section class="hero bg-home-hero">
     <div class="container hero-content">
         <p class="eyebrow">Land Rover Collection</p>
         <h1>Above and<br>Beyond</h1>
@@ -128,7 +128,7 @@
     </div>
 </section>
 
-<section class="cta container" style="background-image: url('{% static 'main/images/pages/home-cta.jpg' %}');">
+<section class="cta container bg-home-cta">
     <div class="cta-content">
         <h2>Ready to Drive<br>Your Dream Car?</h2>
         <a href="{% url 'main:all_cars_view' %}" class="btn">
