@@ -15,15 +15,48 @@ def about_view(request: HttpRequest):
 
 
 def range_rover_view(request: HttpRequest):
-    return render(request, "main/range_rover.html")
+    car = {
+        "name": "Range Rover",
+        "slug": "range-rover",
+        "price": "SAR 795,000",
+        "engine": "4.4L Twin-Turbo V8",
+        "power": "523 hp",
+        "acceleration": "4.6 s",
+        "top_speed": "250 km/h",
+        "overview_title": "The Iconic Range Rover, Elevated",
+        "overview_text": "A perfect balance of refined luxury and legendary capability.",
+    }
+    return render(request, "main/car_detail.html", {"car": car})
 
 
 def defender_view(request: HttpRequest):
-    return render(request, "main/defender.html")
+    car = {
+        "name": "Defender",
+        "slug": "defender",
+        "price": "SAR 465,000",
+        "engine": "3.0L Inline-6 Turbo",
+        "power": "400 hp",
+        "acceleration": "6.1 s",
+        "top_speed": "191 km/h",
+        "overview_title": "Built for Any Adventure",
+        "overview_text": "Unstoppable capability with modern comfort, ready for any terrain.",
+    }
+    return render(request, "main/car_detail.html", {"car": car})
 
 
 def discovery_view(request: HttpRequest):
-    return render(request, "main/discovery.html")
+    car = {
+        "name": "Discovery",
+        "slug": "discovery",
+        "price": "SAR 325,000",
+        "engine": "2.0L Turbo",
+        "power": "249 hp",
+        "acceleration": "7.5 s",
+        "top_speed": "225 km/h",
+        "overview_title": "Versatile by Design",
+        "overview_text": "Flexible space and smart technology for every family journey.",
+    }
+    return render(request, "main/car_detail.html", {"car": car})
 
 def toggle_theme_view(request: HttpRequest):
     current = request.COOKIES.get("theme", "light")
