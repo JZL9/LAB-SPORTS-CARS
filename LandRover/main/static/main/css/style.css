@@ -33,6 +33,7 @@ html {
 }
  
 body {
+    overflow-x: hidden;
     font-family: 'Phudu', sans-serif;
     background-color: var(--bg);
     color: var(--text);
@@ -975,6 +976,24 @@ img {
 
 /* Mobile */
 @media (max-width: 600px) {
+
+      .logo {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .nav-icons {
+        gap: 10px;
+    }
+
+    .nav-icons .material-symbols-outlined {
+        font-size: 20px;
+    }
+
+    .menu-btn {
+        font-size: 24px;
+    }
+
     .hero h1 {
         font-size: 40px;
     }
