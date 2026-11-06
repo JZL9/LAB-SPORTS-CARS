@@ -19,6 +19,9 @@
 
         <a href="{% url 'main:home_view' %}" class="logo">LAND ROVER</a>
 
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-btn material-symbols-outlined">menu</label>
+
         <nav class="nav-links">
             <a href="{% url 'main:home_view' %}"
                class="{% if request.resolver_match.url_name == 'home_view' %}active{% endif %}">Home</a>

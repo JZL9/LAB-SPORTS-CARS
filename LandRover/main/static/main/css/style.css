@@ -892,3 +892,124 @@ img {
     color: var(--text-muted);
     margin-top: 6px;
 }
+
+/* ============ Responsive ============ */
+.menu-checkbox,
+.menu-btn {
+    display: none;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .menu-btn {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        order: 3;
+    }
+
+    .nav-inner {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        order: 4;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .nav-links a {
+        padding: 14px 0;
+        border-top: 1px solid var(--border);
+    }
+
+    .menu-checkbox:checked ~ .nav-links {
+        max-height: 300px;
+    }
+
+    .nav-inner {
+        height: auto;
+        min-height: 70px;
+    }
+
+    .hero {
+        min-height: 70vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .features,
+    .why-grid,
+    .stats,
+    .numbers {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cars-grid,
+    .kf-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .experience,
+    .detail-top {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat,
+    .number {
+        border-bottom: 1px solid var(--border);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .section-header h2,
+    .why h2,
+    .cta h2 {
+        font-size: 28px;
+    }
+
+    .cars-grid,
+    .kf-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-main {
+        height: 280px;
+    }
+
+    .gallery-thumbs img {
+        height: 60px;
+    }
+
+    .experience-text,
+    .cta {
+        padding: 30px 20px;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
